@@ -62,3 +62,19 @@ function strLength(str) {
 }
 
 // strLength("Привет как дела");
+
+// 4 Комбинирование двух массивов без дубликатов
+
+function sumArrays(arrFirst, arrSecond) {
+  let newArr = [...arrFirst, ...arrSecond];
+  let noRepeatArr = [];
+  for (const el of newArr) {
+    if (!noRepeatArr.includes(el)) {
+      noRepeatArr = [...noRepeatArr, el];
+    }
+  }
+
+  console.log(noRepeatArr);
+}
+
+sumArrays([2, 1, 3, 4], [2, 1, 5, 6, 6, 3]);
